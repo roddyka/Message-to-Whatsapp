@@ -17,7 +17,7 @@ Tecnologia utilizada para a criação da extensão:
 * Baixe o projeto no git.
 * Vá na aba do chrome e digite "chrome://extensions/" sem aspas.
 * Ative o modo desenvolvedor no canto direito da tela.
-* Em "Carregar sem compactação" escolha a pasta do projeto
+* Em "Carregar sem compactação" escolha a pasta do projeto.
 * Pronto aparecerá o icone da extensão no cantinho do navegador la em cima na direita.
 
 Obs: Com essa aba aberta onde você carregou o arquivo da extensão baixado, toda modificação no código com seu editor favorito ja é carregado automaticamente na extensão ou va no botão de atualizar na extensão.
