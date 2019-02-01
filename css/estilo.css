@@ -1,0 +1,172 @@
+button {
+    height: 30px;
+    width: 100%;
+    outline: none;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+    background: #456;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+    width: 400px;
+    margin: 16px auto;
+    font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.login-header {
+    background: #009688;
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.login-container {
+    background: #ebebeb;
+    padding: 0px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+    padding: 5px;
+}
+
+.login input,
+textarea,
+select {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #888;
+}
+
+.login input[type="submit"] {
+    background: #009688;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+    background: #02c7b3;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+    border-color: #05a;
+}
+
+span[data-acts-as-select] {
+    min-width: 350px;
+    height: 46px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid lightgray;
+    background-color: white;
+    font-family: Georgia;
+}
+
+span[data-acts-as-select]>span {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+span[data-acts-as-select]:after {
+    position: absolute;
+    content: '▾';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    line-height: 46px;
+}
+
+span[data-acts-as-select] label {
+    display: none;
+    white-space: nowrap;
+    line-height: 46px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+span[data-acts-as-select] label:hover {
+    background-color: lightblue;
+}
+
+span[data-acts-as-select] input[type=radio] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+span[data-acts-as-select] input[type=radio]:checked+label {
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+}
+
+span[data-acts-as-select] input[type=radio]:checked+label:hover {
+    background-color: transparent;
+}
+
+span[data-acts-as-select]:hover label {
+    display: block;
+}
+
+#span-wrap:first-child {
+    background-color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
