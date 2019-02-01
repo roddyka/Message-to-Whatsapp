@@ -96,34 +96,39 @@ select {
     color: #ffffff;
     outline: none;
     position: relative;
-  }
-  .button:before,
-  .button:after {
+}
+
+.button:before,
+.button:after {
     border: 0 solid transparent;
     transition: all 0.25s;
     content: '';
     height: 24px;
     position: absolute;
     width: 24px;
-  }
-  .button:before {
+}
+
+.button:before {
     border-top: 2px solid #00ad9c;
     left: 0px;
     top: -5px;
-  }
-  .button:after {
+}
+
+.button:after {
     border-bottom: 2px solid #00ad9c;
     bottom: -5px;
     right: 0px;
-  }
-  .button:hover {
+}
+
+.button:hover {
     background-color: #00ad9c;
-  }
-  .button:hover:before,
-  .button:hover:after {
+}
+
+.button:hover:before,
+.button:hover:after {
     height: 100%;
     width: 100%;
-  }
+}
 
 span[data-acts-as-select] {
     min-width: 350px;
@@ -205,3 +210,18 @@ span[data-acts-as-select]:hover label {
     }
 }
 
+.hover-shadow-box-animation {
+    
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+  }
+  .hover-shadow-box-animation:hover,
+  .hover-shadow-box-animation:focus,
+  .hover-shadow-box-animation:active {
+    box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+    transform: scale(1.009);
+  }

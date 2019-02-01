@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/estilo.css">
 
 </head>
+
 <body>
   <div class="login">
     <h2 class="login-header">Mensagem para Whatsapp</h2>
@@ -21,7 +22,7 @@
       <!-- <p>
                 <input id="country" type="number" placeholder="Código do país">
             </p> -->
-      <p>
+      <p class="hover-shadow-box-animation">
         <!-- country codes (ISO 3166) and Dial codes. -->
         <select name="countryCode" id="country">
           <option data-countryCode="BR" value="55" selected>Brazil (+55)</option>
@@ -242,20 +243,19 @@
           </optgroup>
         </select>
       </p>
-            <p>
+      <p class="hover-shadow-box-animation">
         <input id="number" type="number" placeholder="Código de área + número do celular">
       </p>
-      <p>
+      <p class="hover-shadow-box-animation">
         <textarea id="message" placeholder="Sua mensagem aqui"></textarea>
       </p>
       <p>
         <div class="button-border"><button type="submit" id="send" value="Send" class="button">Send</button></div>
-      
       </p>
-
     </div>
   </div>
 
   <script src="js/popup.js"></script>
 </body>
+
 </html>
