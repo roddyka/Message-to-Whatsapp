@@ -8,7 +8,7 @@ button {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-    background: #456;
+    background: #fff;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -33,13 +33,13 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 
 .login-container {
     background: #ebebeb;
     padding: 0px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
 }
 
 /* Every row inside .login-container is defined with p tags */
@@ -89,6 +89,41 @@ select {
 .login input[type="submit"]:focus {
     border-color: #05a;
 }
+
+.button {
+    background-color: #009688;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    position: relative;
+  }
+  .button:before,
+  .button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .button:before {
+    border-top: 2px solid #00ad9c;
+    left: 0px;
+    top: -5px;
+  }
+  .button:after {
+    border-bottom: 2px solid #00ad9c;
+    bottom: -5px;
+    right: 0px;
+  }
+  .button:hover {
+    background-color: #00ad9c;
+  }
+  .button:hover:before,
+  .button:hover:after {
+    height: 100%;
+    width: 100%;
+  }
 
 span[data-acts-as-select] {
     min-width: 350px;
