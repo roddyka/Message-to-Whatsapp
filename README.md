@@ -1,6 +1,6 @@
 # Mensagem para Whatsapp
 
-Extensão pra o Google Chrome onde você pode enviar uma mensagem pra algum contato via WhatsApp sem a necessidade e o trabalho de adiciona-lo na agenda. O resultado é esse aí faça o download e vamos melhorar aos poucos o processo.
+Extensão para o Google Chrome, onde você pode enviar uma mensagem para algum contato via WhatsApp sem a necessidade e o trabalho de adiciona-lo na agenda. O resultado é esse aí faça o download e vamos melhorar aos poucos o processo.
 
 Link da extensão: bit.ly/2S9aWOS 
 
@@ -26,8 +26,9 @@ Obs: Com essa aba aberta onde você carregou o arquivo da extensão baixado, tod
 
  - Botão que abrirá campos para adicionar número com ddd e codigo do país + nome da pessoa, criando assim uma agenda no storage.
  - Reconhecer números de qualquer página web e transforma-los em clicaveis levando direto para a tela do whatsapp web.
- 
- - Qualquer idéis que possa complementar e aumentar o poder dessa ferramenta
+ - Implementar bootstrap para estilização
+
+ Idéias são bem-vindas
  
 ### Development
 
