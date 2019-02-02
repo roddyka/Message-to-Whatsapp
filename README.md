@@ -4,6 +4,13 @@ Extensão para o Google Chrome, onde você pode enviar uma mensagem para algum c
 
 Link da extensão: bit.ly/2S9aWOS 
 
+### NEWS
+
+* Atualização no estilo da extensão.
+* Extensão só habilitando em páginas https (Sem abrir uma página não funciona, entende-se que você esteja offline)
+
+### Installation
+
 ### Tech
 
 Tecnologia utilizada para a criação da extensão:
