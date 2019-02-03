@@ -6,8 +6,13 @@ Link da extensão: bit.ly/2S9aWOS
 
 ### NEWS
 
+02/02/2019
 * Atualização no estilo da extensão.
 * Extensão só habilitando em páginas https (Sem abrir uma página não funciona, entende-se que você esteja offline)
+
+03/02/2019
+* Remoção da obrigatoriedade do envio de mensagem
+* Envio direto para o Whatsapp web sem a confirmação da api antes.
 
 ### Installation
 

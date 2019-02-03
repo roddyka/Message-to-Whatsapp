@@ -11,9 +11,9 @@ send.onclick = function(){
   let message = document.getElementById("message").value;
   let country  = document.getElementById("country").value;
   let number = document.getElementById("number").value;
-  let linkapi = "https://api.whatsapp.com/send?phone="+country+number+"&text="+message+"";
-
-  if(message && country && number){
+  let linkapi = "https://web.whatsapp.com/send?phone="+country+number+"&text="+message+"";
+  // let linkapi = "https://api.whatsapp.com/send?phone="+country+number+"&text="+message+"";
+  if(country && number){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.executeScript(
           //tabs[0].id,
