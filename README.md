@@ -14,6 +14,10 @@ Extensão para o Google Chrome, onde você pode enviar uma mensagem para algum c
 * Remoção da obrigatoriedade do envio de mensagem
 * Envio direto para o Whatsapp web sem a confirmação da api antes.
 
+05/02/2019
+* Alterado comunicação do botão para o texto Enviar
+* Hyperlink para download da extenção no README.
+
 ### Installation
 
 ### Tech
