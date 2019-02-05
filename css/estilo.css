@@ -12,6 +12,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 .login {
     width: 400px;
     margin: 16px auto;
@@ -211,11 +215,11 @@ span[data-acts-as-select]:hover label {
 }
 
 .hover-shadow-box-animation {
-    
+
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px transparent;
-    
+
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
   }
