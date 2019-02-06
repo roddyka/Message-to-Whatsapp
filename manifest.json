@@ -1,7 +1,7 @@
 {
   "name": "Message to Whats",
   "short_name": "MtoWhats",
-  "version": "1.8",
+  "version": "1.9",
   "author":"Rodrigo Antunes",
   "description": "Send message to whatsapp contactless in the phonebook",
   "permissions": ["activeTab", "declarativeContent", "storage"],
