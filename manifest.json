@@ -1,6 +1,6 @@
 {
-  "name": "Message to Wpp",
-  "short_name": "MtoWhatsapp",
+  "name": "Message to Whats",
+  "short_name": "MtoWhats",
   "version": "1.8",
   "author":"Rodrigo Antunes",
   "description": "Send message to whatsapp contactless in the phonebook",
