@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/estilo.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mensagem para Whats</title>
+  <link rel="stylesheet" href="css/sidepanel.css">
 </head>
 
 <body>
-  <div class="login">
-    <h2 class="login-header">Mensagem para Whats</h2>
-    <div class="login-container">
-      <p style="text-align: center">
-        <img src="images/128.png"><br>
-        <span>Envie mensagem para um número que não consta em sua agenda sem precisar salvar.</span>
-      </p>
+  <main class="app">
+    <header class="header">
+      <img class="header__logo" src="images/128.png" alt="">
+      <div class="header__text">
+        <h1 class="header__title" data-i18n="title">Mensagem para Whats</h1>
+        <p class="header__subtitle" data-i18n="subtitle">Converse com qualquer número sem salvar o contato.</p>
+      </div>
+      <div class="lang" role="group" aria-label="Idioma" id="lang">
+        <button type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+    </header>
 
-      <p style="color:red" id="mensagemerro" class="hidden">
-        Código do país e Telefone São obrigatórios!
-      </p>
-      <!-- <p>
-                <input id="country" type="number" placeholder="Código do país">
-            </p> -->
-      <p class="hover-shadow-box-animation">
-        <!-- country codes (ISO 3166) and Dial codes. -->
-        <select name="countryCode" id="country">
-          <option data-countryCode="BR" value="55" selected>Brazil (+55)</option>
-          <option data-countryCode="US" value="1">USA (+1)</option>
-          <optgroup label="Other countries">
+    <form id="form" class="card" novalidate>
+      <div class="field">
+        <label class="field__label" for="country" data-i18n="country">País</label>
+        <div class="select">
+          <select id="country" name="countryCode">
+            <option data-countryCode="BR" value="55" selected>Brazil (+55)</option>
+            <option data-countryCode="US" value="1">USA (+1)</option>
+            <optgroup label="Other countries" data-i18n-label="otherCountries">
             <option data-countryCode="DZ" value="213">Algeria (+213)</option>
             <option data-countryCode="AD" value="376">Andorra (+376)</option>
             <option data-countryCode="AO" value="244">Angola (+244)</option>
@@ -73,10 +76,10 @@
             <option data-countryCode="CU" value="53">Cuba (+53)</option>
             <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
             <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
-            <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+            <option data-countryCode="CZ" value="420">Czech Republic (+420)</option>
             <option data-countryCode="DK" value="45">Denmark (+45)</option>
             <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
-            <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
+            <option data-countryCode="DM" value="1767">Dominica (+1767)</option>
             <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
             <option data-countryCode="EC" value="593">Ecuador (+593)</option>
             <option data-countryCode="EG" value="20">Egypt (+20)</option>
@@ -94,7 +97,7 @@
             <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
             <option data-countryCode="GA" value="241">Gabon (+241)</option>
             <option data-countryCode="GM" value="220">Gambia (+220)</option>
-            <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
+            <option data-countryCode="GE" value="995">Georgia (+995)</option>
             <option data-countryCode="DE" value="49">Germany (+49)</option>
             <option data-countryCode="GH" value="233">Ghana (+233)</option>
             <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
@@ -135,7 +138,7 @@
             <option data-countryCode="LS" value="266">Lesotho (+266)</option>
             <option data-countryCode="LR" value="231">Liberia (+231)</option>
             <option data-countryCode="LY" value="218">Libya (+218)</option>
-            <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+            <option data-countryCode="LI" value="423">Liechtenstein (+423)</option>
             <option data-countryCode="LT" value="370">Lithuania (+370)</option>
             <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
             <option data-countryCode="MO" value="853">Macao (+853)</option>
@@ -158,7 +161,7 @@
             <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
             <option data-countryCode="MA" value="212">Morocco (+212)</option>
             <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
-            <option data-countryCode="MN" value="95">Myanmar (+95)</option>
+            <option data-countryCode="MM" value="95">Myanmar (+95)</option>
             <option data-countryCode="NA" value="264">Namibia (+264)</option>
             <option data-countryCode="NR" value="674">Nauru (+674)</option>
             <option data-countryCode="NP" value="977">Nepal (+977)</option>
@@ -170,9 +173,10 @@
             <option data-countryCode="NG" value="234">Nigeria (+234)</option>
             <option data-countryCode="NU" value="683">Niue (+683)</option>
             <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
-            <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
+            <option data-countryCode="MP" value="670">Northern Marianas (+670)</option>
             <option data-countryCode="NO" value="47">Norway (+47)</option>
             <option data-countryCode="OM" value="968">Oman (+968)</option>
+            <option data-countryCode="PK" value="92">Pakistan (+92)</option>
             <option data-countryCode="PW" value="680">Palau (+680)</option>
             <option data-countryCode="PA" value="507">Panama (+507)</option>
             <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
@@ -191,7 +195,7 @@
             <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
             <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
             <option data-countryCode="SN" value="221">Senegal (+221)</option>
-            <option data-countryCode="CS" value="381">Serbia (+381)</option>
+            <option data-countryCode="RS" value="381">Serbia (+381)</option>
             <option data-countryCode="SC" value="248">Seychelles (+248)</option>
             <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
             <option data-countryCode="SG" value="65">Singapore (+65)</option>
@@ -204,13 +208,13 @@
             <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
             <option data-countryCode="SH" value="290">St. Helena (+290)</option>
             <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
-            <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+            <option data-countryCode="LC" value="1758">St. Lucia (+1758)</option>
             <option data-countryCode="SD" value="249">Sudan (+249)</option>
             <option data-countryCode="SR" value="597">Suriname (+597)</option>
             <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
             <option data-countryCode="SE" value="46">Sweden (+46)</option>
             <option data-countryCode="CH" value="41">Switzerland (+41)</option>
-            <option data-countryCode="SI" value="963">Syria (+963)</option>
+            <option data-countryCode="SY" value="963">Syria (+963)</option>
             <option data-countryCode="TW" value="886">Taiwan (+886)</option>
             <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
             <option data-countryCode="TH" value="66">Thailand (+66)</option>
@@ -233,31 +237,68 @@
             <option data-countryCode="VA" value="379">Vatican City (+379)</option>
             <option data-countryCode="VE" value="58">Venezuela (+58)</option>
             <option data-countryCode="VN" value="84">Vietnam (+84)</option>
-            <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
-            <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
+            <option data-countryCode="VG" value="1284">Virgin Islands - British (+1284)</option>
+            <option data-countryCode="VI" value="1340">Virgin Islands - US (+1340)</option>
             <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
             <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
             <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
             <option data-countryCode="ZM" value="260">Zambia (+260)</option>
             <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-          </optgroup>
-        </select>
-      </p>
-      <p class="hover-shadow-box-animation">
-        <input id="number" type="number" placeholder="Código de área + número do celular">
-      </p>
-      <p class="hover-shadow-box-animation">
-        <textarea id="message" placeholder="Sua mensagem aqui (Não obrigatório)"></textarea>
-      </p>
-      <p>
-        <div class="button-border"><button type="submit" id="send" value="Send" class="button">Enviar</button></div>
-      </p>
-    </div>
-  </div>
+            </optgroup>
+          </select>
+        </div>
+      </div>
 
-  <p style="text-align: center">
-    Desenvolvido por <a href="http://antunesweb.com.br" target="_blank">Rodrigo Antunes</a></p>
-    <script src="js/popup.js"></script>
+      <div class="field">
+        <label class="field__label" for="number" data-i18n="number">Número</label>
+        <div class="phone" id="phoneWrap">
+          <span class="phone__prefix" id="prefix">+55</span>
+          <input id="number" type="tel" inputmode="numeric" autocomplete="off"
+            data-i18n-placeholder="numberPlaceholder"
+            placeholder="DDD + número (ex.: 11 91234-5678)">
+        </div>
+        <p class="field__error" id="numberError" data-i18n="numberError" hidden>Informe o número com DDD.</p>
+      </div>
+
+      <div class="field">
+        <div class="field__row">
+          <label class="field__label" for="message"><span data-i18n="message">Mensagem</span> <span class="field__optional" data-i18n="optional">(opcional)</span></label>
+          <span class="field__counter" id="counter">0</span>
+        </div>
+        <textarea id="message" rows="5" data-i18n-placeholder="messagePlaceholder" placeholder="Escreva sua mensagem…"></textarea>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox" id="newTab">
+        <span class="switch__track"><span class="switch__thumb"></span></span>
+        <span class="switch__label" data-i18n="newTab">Abrir em nova aba</span>
+      </label>
+
+      <div class="actions">
+        <button type="button" class="btn btn--ghost" id="clear" data-i18n="clear">Limpar</button>
+        <button type="submit" class="btn btn--primary" id="send">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z" />
+          </svg>
+          <span data-i18n="send">Enviar no WhatsApp</span>
+        </button>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <a class="coffee" href="https://buymeacoffee.com/jnjrai6" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor"
+            d="M4 8h13a3 3 0 0 1 0 6h-.35A6 6 0 0 1 11 18H9a6 6 0 0 1-6-6V9a1 1 0 0 1 1-1Zm13 4a1 1 0 0 0 0-2v2ZM7 2.5c.6.7.6 1.6 0 2.3-.6.7-.6 1.6 0 2.2M11 2.5c.6.7.6 1.6 0 2.3-.6.7-.6 1.6 0 2.2M3 20h15v2H3z" />
+        </svg> <span data-i18n="support">Me pague um café</span>
+      </a>
+      <span class="footer__status" id="status" data-i18n="draftAuto">Rascunho salvo automaticamente</span>
+      <span><span data-i18n="madeBy">Desenvolvido por</span> <a href="http://antunesweb.com.br" target="_blank" rel="noopener">Rodrigo Antunes</a></span>
+    </footer>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/sidepanel.js"></script>
 </body>
 
-</html> 
+</html>

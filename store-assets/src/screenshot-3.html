@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="store.css">
+  <style>
+    body { width: 1280px; height: 800px; }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero__copy">
+      <div class="eyebrow"><img src="../../images/128.png" alt="">Mensagem para Whats</div>
+      <h1>Modo escuro e <em>3 idiomas</em></h1>
+      <p>Segue o tema do seu sistema e fala português, inglês e espanhol.</p>
+      <ul class="bullets">
+        <li>Português, English e Español</li>
+        <li>Mais de 200 códigos de país</li>
+        <li>Ctrl + Enter para enviar</li>
+      </ul>
+    </div>
+    <iframe class="panel" id="panel" src="../../sidepanel.html" width="380" height="700"></iframe>
+  </section>
+
+  <script src="demo.js"></script>
+  <script>
+    fillPanel(document.getElementById('panel'), {lang:'es',theme:'dark',iso:'AR',number:'11 2345-6789',message:'¡Hola! ¿Podemos confirmar la reunión de mañana a las 10 h?'});
+  </script>
+</body>
+
+</html>

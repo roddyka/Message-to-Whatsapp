@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="store.css">
+  <style>
+    body { width: 1280px; height: 800px; }
+  </style>
+</head>
+
+<body>
+  <section class="hero hero--light">
+    <div class="hero__copy">
+      <div class="eyebrow"><img src="../../images/128.png" alt="">Message to Whats</div>
+      <h1>Chat with <em>any number</em> without saving the contact</h1>
+      <p>Pick the country, type the number and you are on WhatsApp Web in one click.</p>
+      <ul class="bullets">
+        <li>No more temporary contacts</li>
+        <li>Works on any tab</li>
+        <li>Free and open source</li>
+      </ul>
+    </div>
+    <iframe class="panel" id="panel" src="../../sidepanel.html" width="380" height="700"></iframe>
+  </section>
+
+  <script src="demo.js"></script>
+  <script>
+    fillPanel(document.getElementById('panel'), {lang:'en',iso:'US',number:'415 555 0123',message:'Hi! I saw your listing and I would love to know more about the bike. Is it still available?'});
+  </script>
+</body>
+
+</html>

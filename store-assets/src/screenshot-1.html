@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="store.css">
+  <style>
+    body {
+      width: 1280px;
+      height: 800px;
+      background: #dfe3e8;
+    }
+
+    .browser {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .tabs {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 42px;
+      padding: 0 12px;
+      background: #dfe3e8;
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+      margin: 0 14px 15px 4px;
+    }
+
+    .dots i {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #c3c8cf;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 230px;
+      height: 34px;
+      padding: 0 14px;
+      font-size: 13px;
+      color: #3c4043;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .tab--active {
+      background: #fff;
+      color: #202124;
+    }
+
+    .tab b {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background: #e8590c;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 46px;
+      padding: 0 14px;
+      background: #fff;
+      border-bottom: 1px solid #e3e5e8;
+      color: #5f6368;
+      font-size: 18px;
+    }
+
+    .omnibox {
+      flex: 1;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px;
+      font-size: 14px;
+      color: #202124;
+      background: #f1f3f4;
+      border-radius: 999px;
+    }
+
+    .omnibox span {
+      color: #5f6368;
+    }
+
+    .ext {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      outline: 2px solid #25d366;
+      outline-offset: 3px;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .page {
+      flex: 1;
+      overflow: hidden;
+      background: #fffaf3;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 48px;
+      font-weight: 600;
+      color: #7a2e0e;
+    }
+
+    .site-nav strong {
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+
+    .site-nav nav {
+      display: flex;
+      gap: 26px;
+      font-size: 15px;
+      color: #8a5a44;
+    }
+
+    .site-hero {
+      margin: 10px 48px 0;
+      padding: 54px 48px;
+      color: #fff;
+      border-radius: 22px;
+      background:
+        radial-gradient(400px 300px at 85% 30%, rgba(255, 196, 0, 0.45), transparent 70%),
+        linear-gradient(135deg, #c2410c, #7c2d12);
+    }
+
+    .site-hero h2 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .site-hero p {
+      margin: 0 0 26px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .phone-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #7c2d12;
+      background: #fff;
+      border-radius: 12px;
+    }
+
+    .phone-tag mark {
+      padding: 0 4px;
+      background: rgba(37, 211, 102, 0.35);
+      border-radius: 4px;
+      color: inherit;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 26px 48px;
+    }
+
+    .menu div {
+      height: 150px;
+      padding: 18px;
+      font-weight: 600;
+      color: #7a2e0e;
+      background: #fff;
+      border: 1px solid #f1e3d3;
+      border-radius: 16px;
+    }
+
+    .menu div::before {
+      content: "";
+      display: block;
+      height: 70px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #fed7aa, #fdba74);
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      width: 392px;
+      background: #f4f6f5;
+      border-left: 1px solid #e3e5e8;
+    }
+
+    .sidebar__bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 40px;
+      padding: 0 12px;
+      font-size: 13px;
+      color: #3c4043;
+      background: #fff;
+      border-bottom: 1px solid #e3e5e8;
+    }
+
+    .sidebar__bar img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .sidebar__bar span {
+      flex: 1;
+    }
+
+    .sidebar iframe {
+      flex: 1;
+      width: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="browser">
+    <div class="tabs">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="tab tab--active"><b></b>Pizzaria Bella Napoli</div>
+      <div class="tab">Nova guia</div>
+    </div>
+    <div class="toolbar">
+      ← → ⟳
+      <div class="omnibox"><span>🔒</span>pizzariabellanapoli.com.br</div>
+      <img class="ext" src="../../images/128.png" alt="">
+      ⋮
+    </div>
+    <div class="main">
+      <div class="page">
+        <div class="site-nav">
+          <strong>🍕 Bella Napoli</strong>
+          <nav><span>Cardápio</span><span>Promoções</span><span>Contato</span></nav>
+        </div>
+        <div class="site-hero">
+          <h2>Pizza artesanal<br>no forno a lenha</h2>
+          <p>Peça pelo WhatsApp e receba em até 40 minutos.</p>
+          <div class="phone-tag">WhatsApp <mark>(11) 91234-5678</mark></div>
+        </div>
+        <div class="menu">
+          <div>Margherita</div>
+          <div>Calabresa</div>
+          <div>Quatro queijos</div>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="sidebar__bar">
+          <img src="../../images/16.png" alt="">
+          <span>Mensagem para Whats</span>
+          📌 ✕
+        </div>
+        <iframe id="panel" src="../../sidepanel.html"></iframe>
+      </aside>
+    </div>
+  </div>
+
+  <script src="demo.js"></script>
+  <script>
+    fillPanel(document.getElementById('panel'), {
+      lang: 'pt',
+      iso: 'BR',
+      number: '11 91234-5678',
+      message: 'Olá! Gostaria de pedir uma pizza grande de margherita para entrega, por favor. 🍕'
+    });
+  </script>
+</body>
+
+</html>

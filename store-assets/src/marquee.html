@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="store.css">
+  <style>
+    body { width: 1400px; height: 560px; }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero__copy">
+      <div class="eyebrow"><img src="../../images/128.png" alt="">Mensagem para Whats</div>
+      <h1>WhatsApp para qualquer número, <em>sem salvar o contato</em></h1>
+      <p>Painel lateral moderno, rascunho automático e 3 idiomas.</p>
+    </div>
+    <iframe class="panel" id="panel" src="../../sidepanel.html" width="380" height="680" style="zoom: 0.74"></iframe>
+  </section>
+
+  <script src="demo.js"></script>
+  <script>
+    fillPanel(document.getElementById('panel'), {lang:'pt',iso:'BR',number:'11 91234-5678',message:'Olá! Tudo bem?'});
+  </script>
+</body>
+
+</html>

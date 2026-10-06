@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="store.css">
+  <style>
+    body {
+      width: 440px;
+      height: 280px;
+    }
+
+    .tile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      height: 100%;
+      padding: 0 34px;
+      color: #fff;
+      background:
+        radial-gradient(320px 220px at 100% 0%, rgba(37, 211, 102, 0.45), transparent 70%),
+        linear-gradient(135deg, #075e54 0%, #0b3d36 60%, #06231f 100%);
+    }
+
+    .tile header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .tile img {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+    }
+
+    .tile h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .tile h1 em {
+      font-style: normal;
+      color: #25d366;
+    }
+  </style>
+</head>
+
+<body data-ready="1">
+  <div class="tile">
+    <header><img src="../../images/128.png" alt="">Mensagem para Whats</header>
+    <h1>Mande mensagem <em>sem salvar o contato</em></h1>
+  </div>
+</body>
+
+</html>

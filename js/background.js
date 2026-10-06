@@ -1,15 +1,12 @@
 'use strict';
 
-chrome.runtime.onInstalled.addListener(function() {
-  // chrome.storage.sync.set({color: '#3aa757'}, function() {
-  //   console.log('The color is green.');
-  // });
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    chrome.declarativeContent.onPageChanged.addRules([{
-      conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: { schemes: ['https'] },
-      })],
-      actions: [new chrome.declarativeContent.ShowPageAction()]
-    }]);
-  });
-});
+// Abre o painel lateral ao clicar no ícone da extensão.
+// Diferente do popup, o painel não fecha ao clicar fora.
+function enableSidePanel() {
+  chrome.sidePanel
+    .setPanelBehavior({ openPanelOnActionClick: true })
+    .catch(function(error) { console.error(error); });
+}
+
+chrome.runtime.onInstalled.addListener(enableSidePanel);
+chrome.runtime.onStartup.addListener(enableSidePanel);

@@ -1,16 +1,24 @@
 {
-  "name": "Message to Whats",
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
   "short_name": "MtoWhats",
-  "version": "1.9",
-  "author":"Rodrigo Antunes",
-  "description": "Send message to whatsapp contactless in the phonebook",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "version": "2.2",
+  "author": "Rodrigo Antunes",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "sidePanel",
+    "storage"
+  ],
   "background": {
-    "scripts": ["js/background.js"],
-    "persistent": false
+    "service_worker": "js/background.js"
   },
-  "page_action": {
-    "default_popup": "popup.html",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
       "16": "images/16.png",
       "32": "images/32.png",
@@ -23,6 +31,5 @@
     "32": "images/32.png",
     "48": "images/48.png",
     "128": "images/128.png"
-  },
-  "manifest_version": 2
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "appName": {
+    "message": "Message to Whats"
+  },
+  "appDesc": {
+    "message": "Send WhatsApp messages to any number without saving the contact."
+  },
+  "actionTitle": {
+    "message": "Message to Whats"
+  }
+}

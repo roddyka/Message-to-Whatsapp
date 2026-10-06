@@ -18,6 +18,21 @@ Extensão para o Google Chrome, onde você pode enviar uma mensagem para algum c
 * Alterado comunicação do botão para o texto Enviar
 * Hyperlink para download da extenção no README.
 
+06/10/2026
+* Migração para o Manifest V3 (padrão atual de extensões do Chrome; o MV2 foi descontinuado).
+* `page_action` substituído por `action` e removido o background/`declarativeContent`: a extensão agora funciona em qualquer aba.
+* Navegação feita via `chrome.tabs.update` (sem `executeScript`) e sem nenhuma permissão extra.
+* Mensagem codificada com `encodeURIComponent` (acentos, `&`, quebras de linha funcionam) e número limpo de caracteres não numéricos.
+* Popup substituído pelo **painel lateral** (Side Panel API): não fecha mais ao clicar fora.
+* Rascunho salvo automaticamente (país, número, mensagem) no `chrome.storage.local`: nada se perde ao fechar o painel.
+* Novo visual: layout moderno nas cores do WhatsApp, modo escuro automático, prefixo do país no campo de número, contador de caracteres, opção "Abrir em nova aba", botão Limpar e atalho Ctrl+Enter para enviar.
+* Requer Chrome 116+.
+* Multilíngue: português, inglês e espanhol, com seletor de idioma (PT/EN/ES) e nomes dos países traduzidos; nome e descrição da extensão traduzidos via `_locales`.
+* Botão "Me pague um café" (Buy Me a Coffee).
+* Código do Paquistão (+92) de volta e correção de vários DDIs (República Tcheca, Geórgia, Liechtenstein, Dominica, Ilhas Virgens).
+* País selecionado agora também fica salvo no rascunho.
+* Imagens e textos da Chrome Web Store em `store-assets/`.
+
 ### Installation
 
 ### Tech

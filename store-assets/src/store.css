@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  color: #111b21;
+  -webkit-font-smoothing: antialiased;
+}
+
+.panel {
+  display: block;
+  border: 0;
+  border-radius: 18px;
+  background: #f4f6f5;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Layout de marketing: texto à esquerda, painel à direita */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 96px;
+  background:
+    radial-gradient(1000px 600px at 85% 20%, rgba(37, 211, 102, 0.35), transparent 60%),
+    linear-gradient(135deg, #075e54 0%, #0b3d36 55%, #06231f 100%);
+  color: #fff;
+}
+
+.hero--light {
+  background:
+    radial-gradient(900px 600px at 90% 10%, rgba(37, 211, 102, 0.28), transparent 60%),
+    linear-gradient(160deg, #f6fbf8 0%, #e3f5ea 100%);
+  color: #111b21;
+}
+
+.hero__copy {
+  max-width: 560px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 6px 14px 6px 6px;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.hero--light .eyebrow {
+  background: rgba(17, 27, 33, 0.06);
+}
+
+.eyebrow img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #25d366;
+}
+
+.hero p {
+  margin: 0 0 28px;
+  font-size: 21px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.bullets {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 19px;
+}
+
+.bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bullets li::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b141a;
+  background: #25d366;
+  border-radius: 50%;
+}
