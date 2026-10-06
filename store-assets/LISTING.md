@@ -64,7 +64,8 @@ NEWS
 * Opens WhatsApp Web directly, without the API confirmation page
 
 ------------------
-Privacy policy: http://antunesweb.com.br/mtowhatsapp/contrato-politica-privacidade.pdf
+Privacy policy: https://antunescode.com/mtowhatsapp/contrato-politica-privacidade.pdf
+Support / FAQ: https://antunescode.com/mtowhatsapp/support
 ```
 
 ## Descrição (PT-BR)
@@ -103,8 +104,15 @@ NOVIDADES
 * Correção de vários códigos de país (República Tcheca, Geórgia, Liechtenstein, Dominica, Ilhas Virgens)
 
 ------------------
-Política de privacidade: http://antunesweb.com.br/mtowhatsapp/contrato-politica-privacidade.pdf
+Política de privacidade: https://antunescode.com/mtowhatsapp/contrato-politica-privacidade.pdf
+Suporte / FAQ: https://antunescode.com/mtowhatsapp/support
 ```
+
+## URLs da ficha
+
+- **Página inicial:** https://antunescode.com/mtowhatsapp
+- **URL de suporte:** https://antunescode.com/mtowhatsapp/support
+- **Política de privacidade:** https://antunescode.com/mtowhatsapp/contrato-politica-privacidade.pdf
 
 ## Aba "Práticas de privacidade": justificativas das permissões
 
