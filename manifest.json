@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_appName__",
   "short_name": "MtoWhats",
-  "version": "2.2",
+  "version": "2.2.1",
   "author": "Rodrigo Antunes",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
