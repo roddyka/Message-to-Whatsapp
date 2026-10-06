@@ -1,74 +1,103 @@
-# Mensagem para Whatsapp
+# Message to Whats
 
-Extensão para o Google Chrome, onde você pode enviar uma mensagem para algum contato via WhatsApp sem a necessidade e o trabalho de adicioná-lo na agenda. O resultado é esse aí faça o download e vamos melhorar aos poucos o processo.
+Chrome extension to send a **WhatsApp** message to any number **without saving the contact**. Pick the country, type the number, write a message (optional) and WhatsApp Web opens straight in the chat.
 
-## [Baixe a extensão aqui](https://bit.ly/2S9aWOS)
+> 🇧🇷 Extensão do Chrome para mandar mensagem no WhatsApp para qualquer número sem salvar o contato. Disponível em português, inglês e espanhol.
 
-### NEWS
+**[Add to Chrome](https://chromewebstore.google.com/detail/onkiceljenjccmakdelhfnnmekpgdpnk)** · [Website](https://antunescode.com/mtowhatsapp) · [Support / FAQ](https://antunescode.com/mtowhatsapp/support) · [Privacy policy](https://antunescode.com/mtowhatsapp/privacy)
 
-02/02/2019
-* Atualização no estilo da extensão.
-* Extensão só habilitando em páginas https (Sem abrir uma página não funciona, entende-se que você esteja offline)
+![Message to Whats in Chrome's side panel](store-assets/screenshot-1.png)
 
-03/02/2019
-* Remoção da obrigatoriedade do envio de mensagem
-* Envio direto para o Whatsapp web sem a confirmação da api antes.
+## Features
 
-05/02/2019
-* Alterado comunicação do botão para o texto Enviar
-* Hyperlink para download da extenção no README.
+- **Side panel** that stays open while you browse — it doesn't close when you click outside
+- **Draft saved automatically**: country, number and message survive closing the panel or the browser
+- Over 200 country codes, with the dial code shown next to the number
+- Open WhatsApp Web in the current tab or in a new one
+- Automatic **dark mode**
+- **English, Português and Español**, with a language switcher (country names translated too)
+- `Ctrl + Enter` to send
+- No sign-up, no ads, no tracking — nothing leaves your computer
 
-06/10/2026
-* Migração para o Manifest V3 (padrão atual de extensões do Chrome; o MV2 foi descontinuado).
-* `page_action` substituído por `action` e removido o background/`declarativeContent`: a extensão agora funciona em qualquer aba.
-* Navegação feita via `chrome.tabs.update` (sem `executeScript`) e sem nenhuma permissão extra.
-* Mensagem codificada com `encodeURIComponent` (acentos, `&`, quebras de linha funcionam) e número limpo de caracteres não numéricos.
-* Popup substituído pelo **painel lateral** (Side Panel API): não fecha mais ao clicar fora.
-* Rascunho salvo automaticamente (país, número, mensagem) no `chrome.storage.local`: nada se perde ao fechar o painel.
-* Novo visual: layout moderno nas cores do WhatsApp, modo escuro automático, prefixo do país no campo de número, contador de caracteres, opção "Abrir em nova aba", botão Limpar e atalho Ctrl+Enter para enviar.
-* Requer Chrome 116+.
-* Multilíngue: português, inglês e espanhol, com seletor de idioma (PT/EN/ES) e nomes dos países traduzidos; nome e descrição da extensão traduzidos via `_locales`.
-* Botão "Me pague um café" (Buy Me a Coffee).
-* Código do Paquistão (+92) de volta e correção de vários DDIs (República Tcheca, Geórgia, Liechtenstein, Dominica, Ilhas Virgens).
-* País selecionado agora também fica salvo no rascunho.
-* Imagens e textos da Chrome Web Store em `store-assets/`.
+| | |
+|---|---|
+| ![Stays open, draft saved](store-assets/screenshot-2.png) | ![Dark mode](store-assets/screenshot-3.png) |
 
-### Installation
+## Privacy
 
-### Tech
+The extension uses only two permissions:
 
-Tecnologia utilizada para a criação da extensão:
+- `sidePanel` — to show the UI in Chrome's side panel;
+- `storage` — to keep the draft and preferences in `chrome.storage.local`, on your device only.
 
-* [HTML] - Código escrito em documento html.
-* [CSS] - Estilo da extensão
-* [Javascript] - Onde é feito toda a mágica.
+No data is collected or sent anywhere. The number and message only go to WhatsApp when you open the chat. Full policy: [antunescode.com/mtowhatsapp/privacy](https://antunescode.com/mtowhatsapp/privacy).
 
-### Installation
+## Development
 
-* Baixe o projeto no git.
-* Vá na aba do chrome e digite "chrome://extensions/" sem aspas.
-* Ative o modo desenvolvedor no canto direito da tela.
-* Em "Carregar sem compactação" escolha a pasta do projeto.
-* Pronto aparecerá o icone da extensão no cantinho do navegador la em cima na direita.
+Requires Chrome 116+.
 
-Obs: Com essa aba aberta onde você carregou o arquivo da extensão baixado, toda modificação no código com seu editor favorito ja é carregado automaticamente na extensão ou vá no botão de atualizar na extensão.
+1. Clone the repo.
+2. Open `chrome://extensions/` and turn on **Developer mode**.
+3. Click **Load unpacked** and choose the project folder.
+4. Click the extension icon — the side panel opens. After editing the code, hit the reload button on the extension card.
 
-### To Do
+### Project structure
 
- - Botão que abrirá campos para adicionar número com ddd e codigo do país + nome da pessoa, criando assim uma agenda no storage.
- - Reconhecer números de qualquer página web e transformá-los em clicáveis levando direto para a tela do whatsapp web.
- - Implementar bootstrap para estilização
+```
+manifest.json         Manifest V3
+sidepanel.html        UI (side panel)
+css/sidepanel.css     styles, light/dark theme
+js/sidepanel.js       form, draft saving, opening WhatsApp Web
+js/i18n.js            PT / EN / ES translations and country names
+js/background.js      service worker: opens the side panel on icon click
+_locales/             extension name/description per language
+store-assets/         Chrome Web Store images and listing texts
+scripts/build-zip.py  builds the package to upload to the store
+```
 
- Ideias são bem-vindas
+### Packaging for the Chrome Web Store
 
-### Development
+```bash
+python scripts/build-zip.py
+```
 
-Hands on!
+Creates `dist/message-to-whats-v<version>.zip` with only the files the extension needs. Bump `version` in `manifest.json` before each upload.
 
-License
-----
+Store images are generated from HTML templates with headless Chrome (needs Pillow):
+
+```bash
+python store-assets/src/render.py
+```
+
+## Changelog
+
+**2.2.1 — 06/10/2026**
+- Rebuilt for **Manifest V3** — the old Manifest V2 version stopped being supported by Chrome
+- Popup replaced by Chrome's **side panel**, which doesn't close when you click outside
+- Automatic draft saving (country, number, message)
+- Brand-new design with dark mode
+- English, Portuguese and Spanish, with a language switcher
+- "Open in a new tab" option and `Ctrl + Enter` shortcut
+- Message is URL-encoded (accents, `&` and line breaks work); spaces and dashes in the number are ignored
+- Pakistan (+92) and fixed dial codes for Czech Republic, Georgia, Liechtenstein, Dominica and the Virgin Islands
+- Buy Me a Coffee button
+
+**05/11/2024** — Translations: PT, ES, EN
+
+**07/07/2020** — Pakistan code; support button
+
+**05/02/2019** — Button text changed to "Send"
+
+**03/02/2019** — Message no longer required; opens WhatsApp Web directly
+
+**02/02/2019** — Style update
+
+## Support the project
+
+If it saves you time, [buy me a coffee ☕](https://buymeacoffee.com/jnjrai6).
+
+Made by [Rodrigo Antunes](https://antunescode.com). Not affiliated with WhatsApp or Meta.
+
+## License
 
 MIT
-
-
-**Free Software, Hell Yeah!**
