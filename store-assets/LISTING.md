@@ -36,10 +36,11 @@ The extension doesn't collect or send any data. Your draft is stored only in you
 
 Open source: https://github.com/roddyka/Message-to-Whatsapp
 Like it? Buy me a coffee: https://buymeacoffee.com/jnjrai6
+More projects: https://antunescode.com
 
 NEWS
 
-10/06/2026 (v2.2)
+10/06/2026 (v2.2.1)
 * Rebuilt for Manifest V3 (the current Chrome extension platform)
 * New side panel that doesn't close when you click outside
 * Automatic draft saving
@@ -88,10 +89,11 @@ A extensão não coleta nem envia nenhum dado. O rascunho fica salvo apenas no s
 
 Código aberto: https://github.com/roddyka/Message-to-Whatsapp
 Gostou? Me pague um café: https://buymeacoffee.com/jnjrai6
+Outros projetos: https://antunescode.com
 
 NOVIDADES
 
-06/10/2026 (v2.2)
+06/10/2026 (v2.2.1)
 * Reescrita para o Manifest V3 (padrão atual das extensões do Chrome)
 * Novo painel lateral que não fecha ao clicar fora
 * Rascunho salvo automaticamente
